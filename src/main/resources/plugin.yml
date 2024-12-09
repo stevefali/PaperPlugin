@@ -1,0 +1,4 @@
+name: PaperPlug_1_21_3
+version: '1.0-SNAPSHOT'
+main: org.steve.paperPlug_1_21_3.PaperPlug_1_21_3
+api-version: '1.21'
