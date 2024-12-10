@@ -23,6 +23,8 @@ public class DropEvents implements Listener {
             moddedLoot.add(item.getItemStack().getType());
         });
 
+        event.getPlayer().sendMessage(event.getBlockState().getType() + " broken!");
+
         event.setCancelled(true);
 
         moddedLoot.forEach(vanillaDrop -> {
@@ -34,6 +36,8 @@ public class DropEvents implements Listener {
     private void dropSomething(Location location, World world, Material vanillaLoot) {
         // Just drop Gold Block for now, this will be a call to get the randomized loot from RandomDrops later.
         Material randomizedLoot = Material.GOLD_BLOCK;
+
+
 
         try  {
             world.dropItemNaturally(location, new ItemStack(randomizedLoot));
